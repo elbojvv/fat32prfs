@@ -829,7 +829,7 @@ static int vfat_unlink(struct inode *dir, struct dentry *dentry)
 
 	printk(KERN_INFO "vfat_unlink: %s.\n", dentry->d_name.name);
 	if (get_prfs_mode() !=2) return -1;
-	if (filename_backup(old_dentry->d_name.name) == 0) return -1;
+	if (filename_backup(dentry->d_name.name) == 0) return -1;
 
 	mutex_lock(&MSDOS_SB(sb)->s_lock);
 
