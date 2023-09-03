@@ -54,7 +54,7 @@ Assuming one also has the switch see: [PRFS switch](https://github.com/elbojvv/p
 sudo ../prfsswitch/prfs_switch &
 ```
 
-Otherwise you can write the number 0, 1 or 2 (for PRFS, read only and rPRFS modes) to /proc/prfs_mode, either from the shell or from your own program. This should be done as super user. Note, the kernel module starts in read only mode until another mode is written. Example:
+Otherwise you can write the number 0, 1 or 2 (for PRFS, read-only and rPRFS modes) to /proc/prfs_mode, either from the shell or from your own program. This should be done as super user. Note, the fat32prfs kernel module starts in read only mode until another mode is written. Example:
 ```
 echo 0 | sudo tee /proc/prfs_mode 
 ```
