@@ -828,23 +828,8 @@ static int vfat_unlink(struct inode *dir, struct dentry *dentry)
 	int err;
 
 	printk(KERN_INFO "vfat_unlink: %s.\n", dentry->d_name.name);
-
 	if (get_prfs_mode() !=2) return -1;
-
-/*	if (filename_backup(dentry->d_name.name) == 1) 
-	{
-		// no rename
-		printk(KERN_INFO "vfat_unlink: %s: May not rename.\n", dentry->d_name.name);	
-		return -1;
-	} else {
-		printk(KERN_INFO "vfat_unlink: %s: Making backup.\n", dentry->d_name.name);
-		fcres = prfs_make_backup(dentry->d_name.name);
-		if (fcres==-1) 
-		{
-			printk(KERN_INFO "vfat_unlink: %s: error making backup; access denied.\n", dentry->d_name.name);
-			return -1;
-		}
-	} */
+	if (filename_backup(old_dentry->d_name.name) == 0) return -1;
 
 	mutex_lock(&MSDOS_SB(sb)->s_lock);
 
@@ -1183,24 +1168,9 @@ static int vfat_rename2(struct user_namespace *mnt_userns, struct inode *old_dir
 			struct dentry *old_dentry, struct inode *new_dir,
 			struct dentry *new_dentry, unsigned int flags)
 {
+	printk(KERN_INFO "vfat_rename2: %s.\n", old_dentry->d_name.name);
 	if (get_prfs_mode() !=2) return -1;
-	
-/*	printk(KERN_INFO "vfat_rename2: %s.\n", old_dentry->d_name.name);
-	if (filename_backup(old_dentry->d_name.name) == 1) 
-	{
-		// no rename
-		printk(KERN_INFO "vfat_rename2: %s: May not rename.\n", old_dentry->d_name.name);	
-		return -1;
-	} else {
-		printk(KERN_INFO "vfat_rename2: %s: Making backup.\n", old_dentry->d_name.name);
-		fcres = prfs_make_backup(old_dentry->d_name.name);
-		if (fcres==-1) 
-		{
-			printk(KERN_INFO "vfat_rename2: %s: error making backup; access denied.\n", old_dentry->d_name.name);
-			return -1;
-		}
-	}
-*/
+	if (filename_backup(old_dentry->d_name.name) == 0) return -1;
 
 	if (flags & ~(RENAME_NOREPLACE | RENAME_EXCHANGE))
 		return -EINVAL;
