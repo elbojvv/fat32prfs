@@ -1,0 +1,9 @@
+# If auto mounted as FAT32, umount and use your mounting point 
+sudo umount /media/pi/0FA7-9420
+sudo insmod prfsmode.ko
+sudo insmod fatprfs.ko
+sudo insmod vfatprfs.ko
+# Use your /dev and mounting point
+sudo mount /dev/mmcblk0p3 -t vfatprfs -o rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022 /mnt/prfs
+sudo ../prfsswitch/prfs_switch &
+
