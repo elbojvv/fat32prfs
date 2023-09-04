@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  *  Based on: linux/fs/fat/inode.c
- *  PRFS written by E.J. van Veldhuizen
+ *  PRFS written 2023 by E.J. van Veldhuizen
  *
  *  Written 1992,1993 by Werner Almesberger
  *  VFAT extensions by Gordon Chaffee, merged with msdos fs by Henrik Storner
