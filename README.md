@@ -1,5 +1,5 @@
 # fat32prfs
-**Ransomware safe file system**
+# Ransomware safe file system
 
 This is a ransomware safe file system for Linux. It works on a FAT32 storage device. When a file is modified a backup with a time stamp is made. This backup can only be read and not be modified. After a ransomware attack all backup files can be restored to the point before the attack. Therefore this is a Protected Reversible File System (PRFS).
 
