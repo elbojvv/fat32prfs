@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  *  Based on linux/fs/msdos/namei.c
- *  Written 2023 by E.J. van Veldhuizen
+ *  PRFS written 2023 by E.J. van Veldhuizen
  *
  *  linux/fs/msdos/namei.c
  *
