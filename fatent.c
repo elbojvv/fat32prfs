@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
+ * PRFS written 2023 by E.J. van Veldhuizen
+ *
  * Copyright (C) 2004, OGAWA Hirofumi
  */
 
