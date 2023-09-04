@@ -1,0 +1,5 @@
+sudo umount /mnt/prfs
+sudo rmmod vfatprfs.ko
+sudo rmmod fatprfs.ko
+sudo rmmod prfsmode.ko
+
