@@ -1,10 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
- *  linux/fs/msdos/namei.c
+ *  Based on linux/fs/msdos/namei.c
  *
- *  Written 1992,1993 by Werner Almesberger
- *  Hidden files 1995 by Albert Cahalan <albert@ccs.neu.edu> <adc@coe.neu.edu>
- *  Rewritten for constant inumbers 1999 by Al Viro
  */
 
 #include <linux/module.h>
@@ -682,7 +679,7 @@ static void __exit exit_msdos_fs(void)
 }
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Werner Almesberger / Elbert Jan van Veldhuizen");
+MODULE_AUTHOR("Elbert Jan van Veldhuizen");
 MODULE_DESCRIPTION("MS-DOS PRFS filesystem support");
 
 module_init(init_msdos_fs)
