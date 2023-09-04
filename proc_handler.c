@@ -12,7 +12,6 @@ int proc_prfs_mode;
 MODULE_LICENSE("Dual BSD/GPL");
 MODULE_AUTHOR("E.J. van Veldhuizen");
 // Based on: https://devarea.com/linux-kernel-development-creating-a-proc-file-and-interfacing-with-user-space/
-//MODULE_AUTHOR("Liran B.H");
 
 static struct proc_dir_entry *ent;
 
