@@ -1,19 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
- *  linux/fs/vfat/namei.c
+ *  Based on linux/fs/vfat/namei.c
  *
- *  Written 1992,1993 by Werner Almesberger
- *
- *  Windows95/Windows NT compatible extended MSDOS filesystem
- *    by Gordon Chaffee Copyright (C) 1995.  Send bug reports for the
- *    VFAT filesystem to <chaffee@cs.berkeley.edu>.  Specify
- *    what file operation caused you trouble and if you can duplicate
- *    the problem, send a script that demonstrates it.
- *
- *  Short name translation 1999, 2001 by Wolfram Pienkoss <wp@bszh.de>
- *
- *  Support Multibyte characters and cleanup by
- *				OGAWA Hirofumi <hirofumi@mail.parknet.co.jp>
  */
 
 #include <linux/module.h>
@@ -1238,7 +1226,7 @@ static void __exit exit_vfat_fs(void)
 
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("VFAT_PRFS filesystem support");
-MODULE_AUTHOR("Gordon Chaffee / Elbert jan van veldhuizen");
+MODULE_AUTHOR("Elbert jan van veldhuizen");
 
 module_init(init_vfat_fs)
 module_exit(exit_vfat_fs)
