@@ -1,7 +1,13 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  *  Based on linux/fs/msdos/namei.c
+ *  Written 2023 by E.J. van Veldhuizen
  *
+ *  linux/fs/msdos/namei.c
+ *
+ *  Written 1992,1993 by Werner Almesberger
+ *  Hidden files 1995 by Albert Cahalan <albert@ccs.neu.edu> <adc@coe.neu.edu>
+ *  Rewritten for constant inumbers 1999 by Al Viro
  */
 
 #include <linux/module.h>
