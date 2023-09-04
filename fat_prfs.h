@@ -1,10 +1,10 @@
 /* SPDX-License-Identifier: GPL-2.0 */
 
 /*
-
-E.J. van veldhuizen
-Based on RPi OS FAT, kernel 6.1.21+. Modified for PRFS.
-
+*
+*  Based on RPi OS FAT, kernel 6.1.21+. Modified for PRFS.
+*  PRFS written 2023 by E.J. van veldhuizen
+*
 */
 
 #ifndef _FAT_H
