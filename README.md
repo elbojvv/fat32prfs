@@ -60,5 +60,4 @@ echo 0 | sudo tee /proc/prfs_mode
 ```
 
 # Known issues:
-- Unloading the kernel modules does not work. This seems to be a Linux problem.
 - I have not made yet a good backup for removing and renaming files. Therefore these operations are blocked in PRFS en read-only modes and are only allowed on backup files in rPRFS mode. 
